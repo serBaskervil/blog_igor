@@ -1,14 +1,25 @@
 <div id="page_wrapper">
-	<h1>New post</h1>
+	<h1>Новий пост</h1>
 
 	<%= form_for :post, url: posts_path do |f| %>
+		<% if @post.errors.any? %>
+			<div id="errors">
+				<h2><%= @post.errors.count %> помилки не дали змогу зберегти пост</h2>
+				<ul>
+					<% @post.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+
 		<p>
-		<%= f.label :title %><br>
+		<%= f.label :Заголовок %><br>
 		<%= f.text_field :title %>
 	</p>
 
 	<p>
-		<%= f.label :body %><br>
+		<%= f.label :Пост %><br>
 		<%= f.text_area :body %>
 	</p>
 	<p>
