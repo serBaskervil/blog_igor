@@ -21,8 +21,8 @@
 			<ul>
 				<li class="category">Ігор Дякович</li>
 				<li><%= link_to "Головна", root_path %></li>
-				<li>Про мене</li>
-				<li> <a href="http://www.facebook.com/IgorDyakovich"> Facebook </a> </li>
+				<li><%= link_to "Про мене", about_path %></li>
+				<li><a href="http://www.facebook.com/IgorDyakovich">Я на Facebook</a></li>
 			</ul>
 		</div>
 		<p class="sign_in">Admin login</p>
@@ -30,7 +30,14 @@
 
 	<div id="main_content">
 		<div id="header">
-			<%= link_to "Всі записи", root_path %>
+			<% if current_page?(root_path) %>
+				<p>Всі записи</p>
+			<% elsif current_page?(about_path) %>
+				<p>Про мене</p>
+			<% else %>
+				<%= link_to "Назад до всіх записів", root_path %>
+			<% end %>
+					
 
 				<div class="buttons">
 					<button class="button"><%= link_to "Новий пост", new_post_path %></button>
