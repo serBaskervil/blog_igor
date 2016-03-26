@@ -18,6 +18,11 @@
 		<%= f.text_area :body %>
 	</p>
 	<p>
-		<%= f.submit %>
+		
+		<% if current_page?(new_post_path) %>
+			<%= f.submit "Створити пост"%>
+		<% elsif current_page?(edit_post_path(@post[:id])) %>
+			<%= f.submit "Оновити пост"%>
+		<% end %>
 	</p>
 <%end%>

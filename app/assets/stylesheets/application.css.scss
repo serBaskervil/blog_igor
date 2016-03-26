@@ -237,6 +237,21 @@ a {
 				text-decoration: none;
 			}
 		}
+		#left_contact{
+			position: relative;
+			top: 10px;
+			background-color: #ccddff;
+			height: 250px;
+			width: 40%;
+		}
+		#right_contact{
+			position: relative;
+			left: 50%;
+			bottom: 260px;
+			background-color: #ccddff;
+			height: 250px;
+			width: 40%;
+		}
 	}
 	.links {
 		margin: 2em 0;
