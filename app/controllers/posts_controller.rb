@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
 	# before_action :authenticate_user!, exept: [:index, :show]
 
-	def index		
+	def index
 		@posts = Post.all.order('created_at DESC')
 	end
 
@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 			redirect_to @post
 		else
 			render 'new'
-		end		
+		end
 	end
 
 	def show
@@ -46,6 +46,6 @@ class PostsController < ApplicationController
 
 	private
 		def post_params
-			params.require(:post).permit(:title, :body)	
+			params.require(:post).permit(:title, :body)
 		end
 end

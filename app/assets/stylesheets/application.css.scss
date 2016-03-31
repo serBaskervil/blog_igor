@@ -215,8 +215,10 @@ a {
 	#page_wrapper {
 		padding: 3em;
 		#profile_image {
+			position: reletive;
+			margin-left: 20px;
 			width: 300px;
-			float: left;
+			float: right;
 			margin-right: 2em;
 			img {
 				width: 100%;
@@ -228,6 +230,7 @@ a {
 				font-weight: 500;
 			}
 			p {
+				text-align: justify;
 				font-size: 1.1em;
 				line-height: 1.75;
 			}

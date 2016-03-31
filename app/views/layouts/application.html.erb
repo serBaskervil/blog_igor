@@ -2,11 +2,11 @@
 <html>
 <head>
   <title>Ігор Дякович | Офіційна сторінка депутата Львівської міської ради</title>
-  
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag	'application', 'https://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= favicon_link_tag 'favicon.svg' %>
+  <%= favicon_link_tag 'favicon.png' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -41,11 +41,11 @@
 			<% else %>
 				<%= link_to "Назад до всіх записів", root_path %>
 			<% end %>
-					
+
 			<% if user_signed_in? %>
 				<div class="buttons">
-					<button class="button"><%= link_to "Новий пост", new_post_path %></button>
-					<button class="button"><%= link_to("Вийти" , destroy_user_session_path, :method => :delete) %></button>
+				  <p class="button"><%= link_to "Новий пост", new_post_path %></p>
+				  <p class="button"><%= link_to("Вийти" , destroy_user_session_path, :method => :delete) %></p>
 				</div>
 			<% end %>
 		</div>
